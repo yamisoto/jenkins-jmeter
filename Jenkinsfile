@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Running jmeter test'
                 
-                sh '''/opt/jmeter/bin/jmeter -jjmeter.save.saveservice.output_format=xml -n -t ${WORKSPACE}/simplilearn.jmx -l ${WORKSPACE}/report.jtl'''
+                sh '''/jmeter/jmeter/bin/jmeter -jjmeter.save.saveservice.output_format=xml -n -t ${WORKSPACE}/simplilearn.jmx -l ${WORKSPACE}/report.jtl'''
             }
         }
         stage('publish jmeter report'){
